@@ -44,7 +44,7 @@ If you would like to scrape only the first page of a search list or search list,
 If you would like to scrape a specific advertiser then just open its profile on the website, copy and paste the link as one of the **startUrl**.
 
 ### Compute Unit Consumption
-The actor optimized to run blazing fast and scrape many as properties as possible. Therefore, it forefronts all advertisement detail requests. If actor doesn't block very often it'll scrape 100 properties in 10 minutes with ~0.8-0.9 compute units.
+The actor optimized to run blazing fast and scrape many as ads as possible. Therefore, it forefronts all advertisement detail requests. If actor doesn't block very often it'll scrape 100 ads in 2 minutes with ~0.15-0.20 compute units.
 
 ### Future Improvements
 - Performance optimizations
