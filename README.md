@@ -54,9 +54,7 @@ The actor optimized to run blazing fast and scrape many as ads as possible. Ther
 ```json
 {
   "startUrls": [
-    {
-      "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=US&view_all_page_id=127843679186911&sort_data[direction]=desc&sort_data[mode]=relevancy_monthly_grouped&search_type=page&media_type=all"
-    }
+    "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=US&view_all_page_id=127843679186911&sort_data[direction]=desc&sort_data[mode]=relevancy_monthly_grouped&search_type=page&media_type=all"
   ],
   "proxy": {
     "useApifyProxy": true,
