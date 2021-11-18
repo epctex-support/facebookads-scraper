@@ -1,84 +1,74 @@
-# Actor - Facebook Ads Scraper
+## Features
 
-## Facebook Ads scraper
+This unofficial Facebook Ads API will make it easier and faster for you to extract advertising data and insights from Facebook Ads, including information about your competitors.
 
-Since Facebook Ads doesn't provide a proper API, this actor should help you to retrieve data from it.
+Facebook Ads Scraper supports the following functionality:
 
-The Facebook Ads data scraper supports the following features:
+-   **Scrape ad details** - You can scrape advertisement details such as end date, number of assets used, advertiser, CDN URL of assets, creation date, platform, and much more.
 
--   **Scrape ad details** - You can scrape the advertisement details like end date, number of assets being used, the advertiser, CDN URL of the asset, creation date, platform and many more. You can find details below.
+-   **Scrape advertisements by filters** - Apply filters so that you only get the results you need.
 
--   **Scrape advertisements by filters** - You can scrape the advertisements by the filters that you would like to apply.
+-   **Scrape advertisers** - If you're looking for data on a specific advertiser's ads, you can directly target them.
 
--   **Scrape advertisers** - If you are looking for a specific advertiser's ads then you can directly target them.
+-   **Scrape by keyword** - Search and extract data based on any keyword. You can also directly select country and advertisement type using this feature.
 
--   **Scrape by keyword** - You can use any keyword you would like to search by. Also you can directly point out country and advertisement type on this feature.
+## Suggested use cases
+-   **Competitor analysis**: Get detailed information about your competitor's Facebook ads strategy.
+-   **Data Analysis**: Analyze Facebook Ads data for any country, category, and keyword.
+-   **Signals**: Get notified about new ads or campaigns in specific countries, categories, and keywords.
 
-## Possible Use-Cases
+## Tutorial
+Check out [how to scrape Facebook Ads without using Facebook Ads API](https://blog.apify.com/how-to-scrape-facebook-ads-without-using-facebook-ads-api/) for more tips on using the scraper.
 
--   **Competitor analysis**: You can use this actor to get detailed information about your competitor's Facebook ads strategy.
--   **Data Analysis**: You can analyse Facebook Ads data any way you want for any country, category and keyword
--   **Signals**: You can use this actor to get notified for new ads on specific countries, categories and keywords.
+## Bugs, fixes, updates, and changelog
+This scraper is under active development. If you have any feature requests, please create an issue from [here](https://github.com/tugkan/facebookads-scraper/issues).
 
-## Bugs, fixes, updates and changelog
-
-This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/tugkan/facebookads-scraper/issues).
-
-## Setup & Usage
-
-You can see how this actor works in these videos:
+## Setup & usage
+Learn how Facebook Ads Scraper works in these videos:
 
 ### Using Start URLs
-
 [![Apify - Facebook Ads Scraper - Start URLs](https://img.youtube.com/vi/UvnerqFkVmo/0.jpg)](https://www.youtube.com/watch?v=UvnerqFkVmo)
 
 You can check the dataset from this video [here](https://api.apify.com/v2/datasets/82Df92jrg9M0xkeYE/items?clean=true&format=json).
 
 ### Using Search
-
-[![Apify - Crunchbase Scraper - Search](https://img.youtube.com/vi/VJHdodVbIbg/0.jpg)](https://www.youtube.com/watch?v=VJHdodVbIbg)
+[![Apify - Facebook Ads Scraper - Search](https://img.youtube.com/vi/VJHdodVbIbg/0.jpg)](https://www.youtube.com/watch?v=VJHdodVbIbg)
 
 You can check the dataset from this video [here](https://api.apify.com/v2/datasets/kHg9dhIXLQu29XfRh/items?clean=true&format=json).
 
-## Input Parameters
-
-The input of this scraper should be JSON containing the list of pages on Facebook Ads that should be visited. Required fields are:
+## Input parameters
+The input for this scraper should be JSON containing the list of pages on Facebook Ads that should be visited. Required fields are:
 
 | Field     | Type    | Description                                                                                                                                                                        |
 | --------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| startUrls | Array   | (optional) List of Facebook Ads URLs. You should only provide advertiser detail, location or listing/search URLs                                                                   |
-| maxItems  | Integer | (optional) You can limit scraped objects. This should be useful when you search through the big subcategories.                                                                     |
-| search    | String  | (optional) Keyword that can be searched in Facebook Ads search engine. When it is present, `adType` and `country` must be used as well.                                            |
-| country   | String  | (optional) 2 digit country code that needs to be provided if `search` keyword is provided. It can be used to target/filter the results by the country.                             |
-| adType    | String  | (optional) Ad types that is required when the `search` keyword is required. Not all of the types does exist on all of the countries. That's why using `all` is strongly suggested. |
-| endPage   | Integer | (optional) Final number of page that you want to scrape. Default is `Infinite`.                                                                                                    |
+| startURLs | Array   | (optional) List of Facebook Ads URLs. You should only provide advertiser detail, location, or listing/search URLs.                                                                   |
+| maxItems  | Integer | (optional) You can limit the number of objects to be scraped. This is useful when scraping big subcategories.                                                                     |
+| search    | String  | (optional) Keyword that can be searched in the Facebook Ads search engine. When this is present, `adType` and `country` must also be used.                                            |
+| country   | String  | (optional) 2-digit country code that needs to be provided if `search` keyword is provided. It can be used to target/filter results by country.                             |
+| adType    | String  | (optional) Ad type is required when the `search` keyword is required. Not all of the types exist for all countries, so `all` is strongly recommended. |
+| endPage   | Integer | (optional) The total number of page that you want to scrape. The default is `Infinite`.                                                                                                    |
 | proxy     | Object  | Proxy configuration                                                                                                                                                                |
 
-This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
+This solution **requires the use of proxy servers**. You can use either your own proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
 
-#### Facebook Ads specific
+### Specific Facebook Ads
+Don't worry if you get slightly different advertisements than you see in a browser page. Facebook Ads orders ads differently for each user, depending on the location, language, and the user who is logged in.
 
-Don't worry when you get little bit different advertisements than you saw in browser page. Facebook Ads is ordering ads differently for each user - depending on the location, language and the user who is logged in.
+### Tip
+When you want to filter a search URL, go to Facebook Ads, create filters for the search list, and copy and paste the link as one of the **start URLs**.
 
-##### Tip
+If you would like to scrape only the first page of a search list, add the link for the page and set the `endPage` as 1.
 
-When you want to have a filtering over a search URL; go to Facebook Ads, create filters over the search list and copy and paste the link as one of the **startUrl**.
+If you would like to scrape a specific advertiser, just open its profile on the website, then copy and paste the link as one of the **start URLs**.
 
-If you would like to scrape only the first page of a search list or search list, then put the link for the page and have the `endPage` as 1.
+## Compute unit consumption
+The actor is optimized to run extremely fast and scrape many as ads as possible, so it forefronts all advertisement detail requests. If the actor doesn't get blocked very often, it will scrape 100 ads in 2 minutes and consume ~0.15-0.20 compute units.
 
-If you would like to scrape a specific advertiser then just open its profile on the website, copy and paste the link as one of the **startUrl**.
-
-### Compute Unit Consumption
-
-The actor optimized to run blazing fast and scrape many as ads as possible. Therefore, it forefronts all advertisement detail requests. If actor doesn't block very often it'll scrape 100 ads in 2 minutes with ~0.15-0.20 compute units.
-
-### Future Improvements
-
+## Future improvements
 -   Performance optimizations
--   Advertisement detail urls as start urls
+-   Advertisement detail URLs as start URLs
 
-### Facebook Ads Scraper Input example
-
+## Facebook Ads Scraper Input example
 ```json
 {
     "startUrls": [
@@ -98,20 +88,17 @@ The actor optimized to run blazing fast and scrape many as ads as possible. Ther
 }
 ```
 
-## During the Run
-
+## During the run
 During the run, the actor will output messages letting you know what is going on. Each message always contains a short label specifying which page from the provided list is currently specified.
 
 If you provide incorrect input to the actor, it will immediately stop with failure state and output an explanation of what is wrong.
 
-## Facebook Ads Export
+## Facebook Ads data export
+During the run, the actor stores the results into a dataset. Each item is a separate item in the dataset.
 
-During the run, the actor stores results into a dataset. Each item is a separate item in the dataset.
+You can manage the results in any languague (Python, PHP, Node.js/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from Facebook Ads Scraper.
 
-You can manage the results in any languague (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this Facebook Ads actor.
-
-## Scraped Facebook Ads Output Example
-
+## Scraped Facebook Ads output example
 The structure of each item in Facebook Ads products looks like this:
 
 ```json
