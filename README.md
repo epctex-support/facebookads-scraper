@@ -17,6 +17,9 @@ Facebook Ads Scraper supports the following functionality:
 -   **Data Analysis**: Analyze Facebook Ads data for any country, category, and keyword.
 -   **Signals**: Get notified about new ads or campaigns in specific countries, categories, and keywords.
 
+# Tip
+Residential proxies are required for this actor. You can either use [Apify Proxy](https://www.apify.com/docs/proxy) or your own custom proxies.
+
 ## Tutorial
 Check out [how to scrape Facebook Ads without using Facebook Ads API](https://blog.apify.com/how-to-scrape-facebook-ads-without-using-facebook-ads-api/) for more tips on using the scraper.
 
