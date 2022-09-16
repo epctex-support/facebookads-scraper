@@ -24,7 +24,7 @@ Residential proxies are required for this actor. You can either use [Apify Proxy
 Check out [how to scrape Facebook Ads without using Facebook Ads API](https://blog.apify.com/how-to-scrape-facebook-ads-without-using-facebook-ads-api/) for more tips on using the scraper.
 
 ## Bugs, fixes, updates, and changelog
-This scraper is under active development. If you have any feature requests, please create an issue from [here](https://github.com/tugkan/facebookads-scraper/issues).
+This scraper is under active development. If you have any feature requests, please create an issue from [here](https://github.com/epctex/facebookads-scraper/issues).
 
 ## Setup & usage
 Learn how Facebook Ads Scraper works in these videos:
